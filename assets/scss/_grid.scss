@@ -1,0 +1,44 @@
+@import "./grid-mixin";
+
+body{
+        @include for-phone{
+            .list__item {
+                display: none !important;
+            }
+            .menu {
+                display: flex !important ; 
+            }
+        }
+        @include for-tablet{
+            .list__item {
+                display: none !important;
+            }
+            .menu {
+                display: flex !important ; 
+            }
+        }
+        @include for-laptop{
+            .list__item {
+                display: none !important;
+            }
+            .menu {
+                display: flex !important ; 
+            }
+        }
+        @include for-large-desktop{
+            .list__item {
+                display: flex !important;
+            }
+            .menu {
+                display: none !important ; 
+            }
+        }
+        @include for-xxl-large-desktop{
+            .list__item {
+                display: flex !important;
+            }
+            .menu {
+                display: none !important ; 
+            }
+        }
+    }

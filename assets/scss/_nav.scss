@@ -1,0 +1,102 @@
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    nav {
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        .logo {
+            h1 {
+                font-size: 35px;
+                color: $main-color;
+                font-family: $main-font;
+            }
+            span {
+                color: rgb(202,9,19);
+            }
+        }
+        .menu {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: 35px
+            }
+        }
+        .list__item {
+            @extend %center;
+            ul {
+                list-style: none;
+                display: flex;
+                li {
+                    margin-right: 40px;
+                    a {
+                        text-decoration: none;
+                        font-family: $main-font;
+                        font-size: $main-size;
+                        font-weight: 600;
+                        color: rgb(139,139,139);
+                        position: relative;
+                        &:hover {
+                            color: $main-color;
+                        }
+                        &::after {
+                            content: '';
+                            height: 2px;
+                            width: 100%;
+                            background-color: red;
+                            position: absolute;
+                            left: 0;
+                            bottom: -8px;
+                            opacity: 0;
+                            transition: 0.2s;
+                        }
+                        &:hover::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .drop-down {
+                    position: relative;
+                    .drop-down-item {
+                        position: absolute;
+                        width: 150px;
+                        border-radius: 7px;
+                        padding: 20px 15px;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        top: 40px;
+                        transition: 0.2s;
+                        visibility: hidden;
+                        li {
+                            a {
+                                color: $main-color;
+                                font-weight: 700;
+                                font-family: $main-font;
+                            }
+                        }
+                    }
+                    &:hover .drop-down-item {
+                        top: 40px;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        .btn {
+            @extend %center;
+            &__price {
+                @include btn-price(rgb(204,14,6),rgb(255,178,172));
+                &:hover {
+                    opacity: 0.7;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

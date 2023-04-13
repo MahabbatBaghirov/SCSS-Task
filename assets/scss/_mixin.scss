@@ -1,0 +1,11 @@
+@mixin btn-price($bgc,$color) {
+    background-color: $bgc;
+    color: $color;
+    font-family: $main-font;
+    font-size: $main-size;
+    font-weight: 500;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 20px;
+    transition: 0.5s;
+}

@@ -1,0 +1,152 @@
+header nav .btn, header nav .list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+header nav {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+header nav .logo h1 {
+  font-size: 35px;
+  color: rgb(40, 40, 40);
+  font-family: Poppins;
+}
+header nav .logo span {
+  color: rgb(202, 9, 19);
+}
+header nav .menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+header nav .menu i {
+  font-size: 35px;
+}
+header nav .list__item ul {
+  list-style: none;
+  display: flex;
+}
+header nav .list__item ul li {
+  margin-right: 40px;
+}
+header nav .list__item ul li a {
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(139, 139, 139);
+  position: relative;
+}
+header nav .list__item ul li a:hover {
+  color: rgb(40, 40, 40);
+}
+header nav .list__item ul li a::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  opacity: 0;
+  transition: 0.2s;
+}
+header nav .list__item ul li a:hover::after {
+  opacity: 1;
+}
+header nav .list__item ul .drop-down {
+  position: relative;
+}
+header nav .list__item ul .drop-down .drop-down-item {
+  position: absolute;
+  width: 150px;
+  border-radius: 7px;
+  padding: 20px 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  top: 40px;
+  transition: 0.2s;
+  visibility: hidden;
+}
+header nav .list__item ul .drop-down .drop-down-item li a {
+  color: rgb(40, 40, 40);
+  font-weight: 700;
+  font-family: Poppins;
+}
+header nav .list__item ul .drop-down:hover .drop-down-item {
+  top: 40px;
+  visibility: visible;
+}
+header nav .btn__price {
+  background-color: rgb(204, 14, 6);
+  color: rgb(255, 178, 172);
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+header nav .btn__price:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  body .list__item {
+    display: none !important;
+  }
+  body .menu {
+    display: flex !important;
+  }
+}
+@media (max-width: 768px) and (min-width: 576px) {
+  body .list__item {
+    display: none !important;
+  }
+  body .menu {
+    display: flex !important;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  body .list__item {
+    display: none !important;
+  }
+  body .menu {
+    display: flex !important;
+  }
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+  body .list__item {
+    display: flex !important;
+  }
+  body .menu {
+    display: none !important;
+  }
+}
+@media (min-width: 1400px) {
+  body .list__item {
+    display: flex !important;
+  }
+  body .menu {
+    display: none !important;
+  }
+}/*# sourceMappingURL=style.css.map */
